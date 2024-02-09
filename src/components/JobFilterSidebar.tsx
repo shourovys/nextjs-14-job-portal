@@ -2,7 +2,7 @@ import { jobTypes } from "@/lib/job-types";
 import prisma from "@/lib/prisma";
 import { JobFilterValues, jobFilterSchema } from "@/lib/validation";
 import { redirect } from "next/navigation";
-import { Button } from "./ui/button";
+import FormSubmitButton from "./FormSubmitButton";
 import { Input } from "./ui/input";
 import { Label } from "./ui/label";
 import Select from "./ui/selectCM";
@@ -86,9 +86,7 @@ const JobFilterSidebar: React.FC<JobFilterSidebarProps> = async ({
             />
             <Label htmlFor="remote">Remote jobs</Label>
           </div>
-          <Button type="submit" className="w-full">
-            Filter jobs
-          </Button>
+          <FormSubmitButton className="w-full">Filter jobs</FormSubmitButton>
         </div>
       </form>
     </aside>
